@@ -1,13 +1,14 @@
-# viper template for Generamba
-my own viper gen files
+# VIP template for Generamba with SwiftUI
+
+Our own impletation VIP in SwiftUI
+
+1) Module has model with state, called *Your_Module_name*ViewModel.swift
+2) View and Presenter has reference to this ViewModule. Every change in ViewModule call refresh View that has this ViewModel.
+3) For  navigation you can use "Router" property in *Your_Module_name*View.swift
 
 ## How to use
 You need some BaseClasses
 1. DIResolver
-2. BaseWireFrame
-3. BaseInteractor
-4. BasePresenter
-5. BaseViewController: UIViewController
 
 ### DIResolver
 ```swift
@@ -17,36 +18,6 @@ class DIResolver {
 
 }
 ```
+Then just use this :)
 
-### BaseWireFrame
-```swift
-class BaseWireFrame {
-
-    let resolver: DIResolver
-
-    init(resolver: DIResolver) {
-        self.resolver = resolver
-    }
-}
-```
-
-### BaseInteractor
-```swift
-class BaseInteractor { }
-```
-
-### BasePresenter
-```swift
-class BasePresenter { }
-```
-
-### BaseViewController
-```swift
-class BaseViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-}
-```
+Don't use *update(model..)* func for update your UI! Use viewModule only!
