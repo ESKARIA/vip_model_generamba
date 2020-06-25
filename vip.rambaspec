@@ -1,0 +1,33 @@
+# Template information section
+name: vip
+summary: Our implementation VIP module with SwiftUI
+author: ESKARIA Corporation
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+# View layer
+- {name: View/View.swift, path: Code/View/view.swift.liquid}
+
+# View model
+- {name: View/ViewModel/ViewModel.swift, path: Code/View/ViewModel/viewModel.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# Interactor layer
+- {name: Interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+
+# Protocols layer
+- {name: Protocols/Protocols.swift, path: Code/Protocols/protocols.swift.liquid}
+
+# Resolver file
+- {name: +DIResolver.swift, path: Code/Resolver/Resolver.swift.liquid}
+
+# The declarations for test files
+test_files:
+- {name: +Tests.swift, path: Code/Tests/Tests.swift.liquid}
+
+# Template dependencies
+dependencies:

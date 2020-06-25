@@ -1,0 +1,22 @@
+//
+//  DIResolver+{{ module_info.name }}.swift
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import SwiftUI
+
+// MARK: - {{ module_info.name }}Protocol
+extension DIResolver {
+    func present{{ module_info.name }}View() -> some View {
+        
+        let viewModel = {{ module_info.name }}ViewModel()
+        var view = {{ module_info.name }}View(model: viewModel, router: self)
+        let interactor = {{ module_info.name }}Interactor()
+        let presenter = {{ module_info.name }}Presenter(model: viewModel, interactor: interactor, view: view)
+        view.presenter = presenter
+        return view
+    }
+}
